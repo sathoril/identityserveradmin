@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\bfcorrea\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.3.0</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\Properties\launchSettings.json" Condition="Exists('$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\Properties\launchSettings.json')">
+      <NuGetPackageId>IdentityExpress.Manager.Api.Community</NuGetPackageId>
+      <NuGetPackageVersion>3.0.0-preview1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>Properties\launchSettings.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\appsettings.json" Condition="Exists('$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\appsettings.json')">
+      <NuGetPackageId>IdentityExpress.Manager.Api.Community</NuGetPackageId>
+      <NuGetPackageVersion>3.0.0-preview1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>appsettings.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\web.config" Condition="Exists('$(NuGetPackageRoot)identityexpress.manager.api.community\3.0.0-preview1\contentFiles\any\netcoreapp3.0\web.config')">
+      <NuGetPackageId>IdentityExpress.Manager.Api.Community</NuGetPackageId>
+      <NuGetPackageVersion>3.0.0-preview1</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Private>False</Private>
+      <Link>web.config</Link>
+    </Content>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.0.0\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\3.0.0\build\netcoreapp2.0\Microsoft.EntityFrameworkCore.Design.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\bfcorrea\.nuget\packages\microsoft.entityframeworkcore.tools\3.0.0</PkgMicrosoft_EntityFrameworkCore_Tools>
+  </PropertyGroup>
+</Project>
