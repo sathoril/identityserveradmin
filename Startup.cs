@@ -36,6 +36,15 @@ namespace IdentityServerAdmin
         {
             services.AddControllersWithViews();
 
+            services.AddCors(options => {
+                options.AddPolicy("CorsPolicy",
+                builder => builder
+                .WithOrigins("http://localhost:4200", "http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+            });
+
             // configures IIS out-of-proc settings (see https://github.com/aspnet/AspNetCore/issues/14882)
             services.Configure<IISOptions>(iis =>
             {
@@ -107,6 +116,7 @@ namespace IdentityServerAdmin
                     options.ClientSecret = "copy client secret from Google here";
                 });
 
+            
             services.UseAdminUI();
             services.AddScoped<IdentityExpressDbContext, SqliteIdentityDbContext>();
         }
@@ -135,6 +145,8 @@ namespace IdentityServerAdmin
             //    });
             //}
 
+            app.UseCors("CorsPolicy");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -147,12 +159,6 @@ namespace IdentityServerAdmin
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            //app.UseStaticFiles(new StaticFileOptions
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //    Path.Combine(Directory.GetCurrentDirectory(), "./")),
-            //    RequestPath = "/identityserver"
-            //});
 
             app.UseRouting();
             app.UseIdentityServer();
