@@ -1,7 +1,7 @@
 var ENV = {
-    ApiUrl: 'http://localhost:5000',
-    UiUrl: 'http://localhost:5000/admin',
-    AuthorityUrl: 'http://localhost:5000',
+    ApiUrl: 'https://docksv2',
+    UiUrl: 'http://docksv2/admin',
+    AuthorityUrl: 'http://docksv2',
     AddUserPassword: true,
     CommunityEdition: true,
     UserManagementDisabled: false
