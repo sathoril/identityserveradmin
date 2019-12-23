@@ -146,15 +146,15 @@ namespace IdentityServerAdmin
             //    });
             //}
 
-            var forwardOptions = new ForwardedHeadersOptions
-            {
-                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
-                RequireHeaderSymmetry = false
-            };
+            // var forwardOptions = new ForwardedHeadersOptions
+            // {
+            //     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto,
+            //     RequireHeaderSymmetry = false
+            // };
 
             forwardOptions.KnownNetworks.Clear();
             forwardOptions.KnownProxies.Clear();
-            
+
             app.UseForwardedHeaders(forwardOptions);
 
             app.UseCors("CorsPolicy");
